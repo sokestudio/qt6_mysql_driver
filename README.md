@@ -38,8 +38,8 @@ DESTDIR= ./outputDir/
 - 最后，选择‘构建’并生成相应驱动文件，其中生成的驱动链接文件放在outputDir中 (可能编译会出现:Cannot read C:/Users/.qmake.conf: No such file or directory，可忽略不影最终响驱动文件生成)
 
 ### 复制文件
-> 这里，以MSVC2019 64bit环境下编译为例，将生成的文件qsqlmysql.dll复制到./Qt/6.4.0/msvc2019_64/plugins/sqldrivers/下，同时也可将debug环境下qsqlmysqld.dll放入
-> 此外，还需要将mysql-connector-c-win64/bin文件下的libmysql.dll复制到./Qt/6.4.0/msvc2019_64/bin/下，同样也可将libmysqld.dll放入，用于debug环境；
+- 这里，以MSVC2019 64bit环境下编译为例，将生成的文件qsqlmysql.dll复制到./Qt/6.4.0/msvc2019_64/plugins/sqldrivers/下，同时也可将debug环境下qsqlmysqld.dll放入
+- 此外，还需要将mysql-connector-c-win64/bin文件下的libmysql.dll复制到./Qt/6.4.0/msvc2019_64/bin/下，同样也可将libmysqld.dll放入，用于debug环境；
 
 ### 测试连接
 ```
@@ -55,7 +55,6 @@ DESTDIR= ./outputDir/
     }
     else {
         QMessageBox::information(this, "infor", "link failed");
-        //qDebug()<<"error open database because"<<db.lastError().text();
     }
 ```
 
