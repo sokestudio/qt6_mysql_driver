@@ -2,6 +2,7 @@
 
 ### 1.项目概述（若要编译，请确定项目编译环境是64位）
 > 目前Qt6一般不提供mysql驱动，而且也没有pro文件来生成对应的驱动文件
+> 
 在Qt连接mysql数据库时，一般由于没有相应的驱动文件，在编译过程中会出现下面的问题：QSqlDatabase: QMYSQL driver not loaded
 而通过本工程手动编译就可以实现相应环境下mysql驱动文件的生成
 
@@ -58,10 +59,10 @@ DESTDIR= ./outputDir/
     }
 ```
 
-### 其他
+### 5.其他
 > 目前本工程仅支持编译64位环境下mysql的驱动文件，mysql版本对应的头、库文件，动静态链接库都放在mysql-connector-c-win64文件夹中，如果你想编译其他版本的可访问[这里](https://downloads.mysql.com/archives/c-c/)，来选择下载对应的版本的zip文件夹
 >
 ![t1](https://user-images.githubusercontent.com/50172682/203330902-3d3b3e90-a832-4b47-b14e-d0cf381ef821.png)
 
-### 参考文件
+### 6.参考文件
 [1] [彻底解决qt6.1.2,qmysql驱动.](https://blog.csdn.net/qq_40303500/article/details/118384147)
