@@ -14,7 +14,7 @@ include(../qsqldriverbase.pri)
 INCLUDEPATH += ../mysql-connector-c-win64/include
  
 #添加依赖的.lib文件
-LIBS += ../mysql-connector-c-win64/lib/libmysql.lib
+LIBS += ../mysql-connector-c-win64/lib/*.lib
  
 #生成你所需要的dll存放目录
 DESTDIR= ./outputDir/
